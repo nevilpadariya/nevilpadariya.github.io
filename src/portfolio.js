@@ -27,7 +27,7 @@ const greeting = {
   resumeLink:
     "https://drive.google.com/file/d/1ioA15Qx1vuT-2U7_9C3XMoFVP6T32WSK/view?usp=sharing",
   portfolio_repository:
-    "https://github.com/ashutosh1919/https://github.com/nevilpadariya/nevilpadariya.github.io",
+    "https://github.com/nevilpadariya/nevilpadariya.github.io",
   githubProfile: "https://github.com/nevilpadariya",
 };
 
