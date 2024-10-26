@@ -483,7 +483,7 @@
           "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
         y =
           "https://drive.google.com/file/d/1ioA15Qx1vuT-2U7_9C3XMoFVP6T32WSK/view?usp=sharing",
-        E = "https://github.com/nevilpadariya/nevilpadariya.github.io",
+        E = "https://github.com/nevilpadariya/",
         v = "https://github.com/nevilpadariya",
         w = [
           {
