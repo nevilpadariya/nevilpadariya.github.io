@@ -1,5 +1,5 @@
-(this.webpackJsonpmasterPortfolio =
-  this.webpackJsonpmasterPortfolio || []).push([
+(this["webpackJsonpNevil Padariya"] =
+  this["webpackJsonpNevil Padariya"] || []).push([
   [2],
   [
     function (e, t, n) {
@@ -38290,4 +38290,4 @@
     },
   ],
 ]);
-//# sourceMappingURL=2.78d6cd53.chunk.js.map
+//# sourceMappingURL=2.3e0ff732.chunk.js.map
