@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.97d072a4.chunk.css",
-    "main.js": "./static/js/main.17f6b2fe.chunk.js",
-    "main.js.map": "./static/js/main.17f6b2fe.chunk.js.map",
+    "main.js": "./static/js/main.f44651d3.chunk.js",
+    "main.js.map": "./static/js/main.f44651d3.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f05b99d5.js",
     "runtime-main.js.map": "./static/js/runtime-main.f05b99d5.js.map",
     "static/js/2.3e0ff732.chunk.js": "./static/js/2.3e0ff732.chunk.js",
     "static/js/2.3e0ff732.chunk.js.map": "./static/js/2.3e0ff732.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.c6ea699b7f0303e0bbdb42ad02c9e8b1.js": "./precache-manifest.c6ea699b7f0303e0bbdb42ad02c9e8b1.js",
+    "precache-manifest.00e12149e199dc48f1a0bd587cb24fb3.js": "./precache-manifest.00e12149e199dc48f1a0bd587cb24fb3.js",
     "service-worker.js": "./service-worker.js",
     "static/css/main.97d072a4.chunk.css.map": "./static/css/main.97d072a4.chunk.css.map",
     "static/media/index.css": "./static/media/Montserrat-Regular.ee653992.ttf",
@@ -33,9 +33,9 @@
     "static/media/googleAssistant.jpg": "./static/media/googleAssistant.0c8a4c11.jpg",
     "static/media/googleAssistant.svg": "./static/media/googleAssistant.a6addc3f.svg",
     "static/media/ibm_logo.png": "./static/media/ibm_logo.d3fccbe1.png",
-    "static/media/iiitk_logo.png": "./static/media/iiitk_logo.571a8584.png",
+    "static/media/iiitk_logo.png": "./static/media/iiitk_logo.3e8700c2.png",
     "static/media/intel_logo.jpg": "./static/media/intel_logo.29152cf7.jpg",
-    "static/media/iu_logo.png": "./static/media/iu_logo.60ed0bd3.png",
+    "static/media/iu_logo.png": "./static/media/iu_logo.af65b3b3.png",
     "static/media/jsFramework.svg": "./static/media/jsFramework.5b4a6449.svg",
     "static/media/legato_logo.png": "./static/media/legato_logo.c597fbde.png",
     "static/media/manOnTable.svg": "./static/media/manOnTable.83ac24fb.svg",
@@ -55,6 +55,6 @@
     "static/js/runtime-main.f05b99d5.js",
     "static/js/2.3e0ff732.chunk.js",
     "static/css/main.97d072a4.chunk.css",
-    "static/js/main.17f6b2fe.chunk.js"
+    "static/js/main.f44651d3.chunk.js"
   ]
 }

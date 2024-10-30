@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b59754b5eb402d406d05d41e3a29408",
+    "revision": "96b7d536511c42cc5b48e4f062005bf7",
     "url": "./index.html"
   },
   {
-    "revision": "80169f44e3103edd4cd0",
+    "revision": "4ae774c518815171ed7e",
     "url": "./static/css/main.97d072a4.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.3e0ff732.chunk.js"
   },
   {
-    "revision": "80169f44e3103edd4cd0",
-    "url": "./static/js/main.17f6b2fe.chunk.js"
+    "revision": "4ae774c518815171ed7e",
+    "url": "./static/js/main.f44651d3.chunk.js"
   },
   {
     "revision": "c05e9ada456da06ee982",
@@ -192,16 +192,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/ibm_logo.d3fccbe1.png"
   },
   {
-    "revision": "571a8584e69ecfbe326c8b8385fbbf54",
-    "url": "./static/media/iiitk_logo.571a8584.png"
+    "revision": "3e8700c2349c4280583cd585d3283c22",
+    "url": "./static/media/iiitk_logo.3e8700c2.png"
   },
   {
     "revision": "29152cf756a1facead5393c32e373371",
     "url": "./static/media/intel_logo.29152cf7.jpg"
   },
   {
-    "revision": "60ed0bd3f8b99ac1d29e74575f804aaa",
-    "url": "./static/media/iu_logo.60ed0bd3.png"
+    "revision": "af65b3b3ebb1e4eed0013ce17c751780",
+    "url": "./static/media/iu_logo.af65b3b3.png"
   },
   {
     "revision": "5b4a6449747ec61a6d9aa874f2a9ceba",
