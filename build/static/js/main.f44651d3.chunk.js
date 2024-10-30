@@ -265,13 +265,13 @@
       e.exports = a.p + "static/media/ibm_logo.d3fccbe1.png";
     },
     function (e, t, a) {
-      e.exports = a.p + "static/media/iiitk_logo.571a8584.png";
+      e.exports = a.p + "static/media/iiitk_logo.3e8700c2.png";
     },
     function (e, t, a) {
       e.exports = a.p + "static/media/intel_logo.29152cf7.jpg";
     },
     function (e, t, a) {
-      e.exports = a.p + "static/media/iu_logo.60ed0bd3.png";
+      e.exports = a.p + "static/media/iu_logo.af65b3b3.png";
     },
     function (e, t, a) {
       e.exports = a.p + "static/media/jsFramework.5b4a6449.svg";
@@ -749,30 +749,30 @@
         k = {
           degrees: [
             {
-              title: "Indian Institute of Information Technology Kurnool",
-              subtitle: "B.Tech. in Computer Engineering",
+              title: "San Jos\xe9 State University",
+              subtitle: "M.S. in Software Engineering",
               logo_path: "iiitk_logo.png",
-              alt_name: "IIITDM Kurnool",
-              duration: "2016 - 2020",
+              alt_name: "SJSU",
+              duration: "2024 - Present",
               descriptions: [
                 "\u26a1 I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
                 "\u26a1 Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
                 "\u26a1 I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.",
               ],
-              website_link: "http://iiitk.ac.in",
+              website_link: "https://www.sjsu.edu/",
             },
             {
-              title: "Indiana University Bloomington",
-              subtitle: "M.S. in Computer Science",
+              title: "Gujarat Technological University",
+              subtitle: "B.Tech. in Computer Engineering",
               logo_path: "iu_logo.png",
-              alt_name: "Indiana University Bloomington",
-              duration: "2021 - 2023",
+              alt_name: "GTU",
+              duration: "2018 - 2022",
               descriptions: [
                 "\u26a1 I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",
                 "\u26a1 Apart from this, I have also done research assistantship. As part of it, I have worked on creating new algorithms in Graph ML and Network Science.",
                 "\u26a1 During my time at university, I was also associated with multimedia department. As part of it, I have worked on some documentry films and interviews.",
               ],
-              website_link: "https://www.indiana.edu/",
+              website_link: "https://www.gtu.ac.in/",
             },
           ],
         },
@@ -1345,12 +1345,12 @@
         }
       }
       var L,
-        Q = j,
-        P = (a(116), a(40)),
+        P = j,
+        Q = (a(116), a(40)),
         V = (a(117), a(21));
       const q = V.c.span(
         L ||
-          (L = Object(P.a)([
+          (L = Object(Q.a)([
             "\n  i {\n    background-color: ",
             ";\n  }\n  &:hover i {\n    background-color: ",
             ";\n    transition: 0.3s ease-in;\n  }\n",
@@ -4329,7 +4329,7 @@
           return s.a.createElement(
             "div",
             null,
-            s.a.createElement(Q, { theme: this.props.theme }),
+            s.a.createElement(P, { theme: this.props.theme }),
             s.a.createElement(_, { theme: this.props.theme }),
             s.a.createElement(me, { theme: this.props.theme }),
             s.a.createElement(he, { theme: this.props.theme }),
@@ -5199,7 +5199,7 @@
           return s.a.createElement(
             "div",
             { className: "education-main" },
-            s.a.createElement(Q, { theme: this.props.theme }),
+            s.a.createElement(P, { theme: this.props.theme }),
             s.a.createElement(
               "div",
               { className: "basic-education" },
@@ -5884,7 +5884,7 @@
           return s.a.createElement(
             "div",
             { className: "experience-main" },
-            s.a.createElement(Q, { theme: e }),
+            s.a.createElement(P, { theme: e }),
             s.a.createElement(
               "div",
               { className: "basic-experience" },
@@ -5942,7 +5942,7 @@
       var Xe = He,
         je = a(41),
         Le = (a(275), a(25));
-      class Qe extends r.Component {
+      class Pe extends r.Component {
         render() {
           const e = {
             labels: ["Open", "Merged", "Closed"],
@@ -5979,7 +5979,7 @@
           );
         }
       }
-      var Pe = Qe,
+      var Qe = Pe,
         Ve = (a(276), a(31));
       class qe extends r.Component {
         render() {
@@ -6042,7 +6042,7 @@
             s.a.createElement(
               "div",
               { className: "os-charts-body-div" },
-              s.a.createElement(Pe, null),
+              s.a.createElement(Qe, null),
               s.a.createElement(Je, null)
             )
           );
@@ -6497,7 +6497,7 @@
           return s.a.createElement(
             "div",
             { className: "opensource-main" },
-            s.a.createElement(Q, { theme: this.props.theme }),
+            s.a.createElement(P, { theme: this.props.theme }),
             s.a.createElement(tt, { theme: this.props.theme }),
             s.a.createElement(Ye, { theme: this.props.theme }),
             s.a.createElement(ot, { theme: this.props.theme }),
@@ -7073,7 +7073,7 @@
           return s.a.createElement(
             "div",
             { className: "contact-main" },
-            s.a.createElement(Q, { theme: e }),
+            s.a.createElement(P, { theme: e }),
             s.a.createElement(
               "div",
               { className: "basic-contact" },
@@ -8099,7 +8099,7 @@
           return s.a.createElement(
             "div",
             { className: "projects-main" },
-            s.a.createElement(Q, { theme: e }),
+            s.a.createElement(P, { theme: e }),
             s.a.createElement(
               "div",
               { className: "basic-projects" },
@@ -8204,7 +8204,7 @@
           return s.a.createElement(
             "div",
             { className: "error-main" },
-            s.a.createElement(Q, { theme: this.props.theme }),
+            s.a.createElement(P, { theme: this.props.theme }),
             s.a.createElement(
               "div",
               { className: "error-class" },
@@ -8347,7 +8347,7 @@
       var Ut;
       const Rt = Object(V.b)(
         Ut ||
-          (Ut = Object(P.a)([
+          (Ut = Object(Q.a)([
             "\n  *,\n  *::after,\n  *::before {\n    box-sizing: border-box;\n  }\n\n  body {\n    align-items: center;\n    background: ",
             ";\n    color: ",
             ";\n    display: flex;\n    // flex-direction: column;\n    // justify-content: center;\n    // height: 100vh;\n    // margin: 0;\n    // padding: 0;\n    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\n    transition: all 0.25s linear;\n  }",
@@ -8398,4 +8398,4 @@
   ]),
   [[92, 1, 2]],
 ]);
-//# sourceMappingURL=main.17f6b2fe.chunk.js.map
+//# sourceMappingURL=main.f44651d3.chunk.js.map
