@@ -478,8 +478,8 @@
         },
         f = "Nevil Padariya",
         b = "Nevil Padariya",
-        C = "NP",
-        A =
+        A = "NP",
+        C =
           "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
         y =
           "https://drive.google.com/file/d/1ioA15Qx1vuT-2U7_9C3XMoFVP6T32WSK/view?usp=sharing",
@@ -1116,7 +1116,7 @@
         let b = w
             .find((e) => e.link.startsWith("mailto"))
             .link.substring("mailto:".length),
-          C =
+          A =
             null === (e = N.sections) ||
             void 0 === e ||
             null === (t = e.find((e) => e.work)) ||
@@ -1125,9 +1125,9 @@
             void 0 === a
               ? void 0
               : a.at(0),
-          A = [];
+          C = [];
         Z.certifications.forEach((e) => {
-          A.push({
+          C.push({
             "@context": "https://schema.org",
             "@type": "EducationalOccupationalCredential",
             url: e.certificate_link,
@@ -1146,8 +1146,8 @@
           email: b,
           telephone: null === (o = I) || void 0 === o ? void 0 : o.subtitle,
           sameAs: p,
-          jobTitle: C.title,
-          worksFor: { "@type": "Organization", name: C.company },
+          jobTitle: A.title,
+          worksFor: { "@type": "Organization", name: A.company },
           address: {
             "@type": "PostalAddress",
             addressLocality:
@@ -1160,7 +1160,7 @@
             streetAddress:
               null === (m = O) || void 0 === m ? void 0 : m.streetAddress,
           },
-          hasCredential: A,
+          hasCredential: C,
         };
         return s.a.createElement(
           z.a,
@@ -1845,7 +1845,7 @@
                     { className: "greeting-text", style: { color: t.text } },
                     f
                   ),
-                  C &&
+                  A &&
                     s.a.createElement(
                       "h2",
                       {
@@ -1853,7 +1853,7 @@
                         style: { color: t.text },
                       },
                       "( ",
-                      C,
+                      A,
                       " )"
                     ),
                   s.a.createElement(
@@ -1862,7 +1862,7 @@
                       className: "greeting-text-p subTitle",
                       style: { color: t.secondaryText },
                     },
-                    A
+                    C
                   ),
                   s.a.createElement(J, { theme: t }),
                   s.a.createElement(
@@ -4592,7 +4592,7 @@
           )
         );
       }
-      class Ce extends r.Component {
+      class Ae extends r.Component {
         constructor(e) {
           super(e), (this.state = { redirect: !1 });
         }
@@ -4608,7 +4608,7 @@
             : s.a.createElement(be, { theme: this.props.theme });
         }
       }
-      var Ae = Ce;
+      var Ce = Ae;
       a(126), a(127);
       class ye extends r.Component {
         render() {
@@ -4743,104 +4743,10 @@
       }
       var we = ve;
       a(173), a(174);
-      class xe extends r.Component {
-        render() {
-          const e = this.props.certificate,
-            t = this.props.theme;
-          return s.a.createElement(
-            u.Fade,
-            { bottom: !0, duration: 2e3, distance: "20px" },
-            s.a.createElement(
-              "div",
-              { className: "cert-card" },
-              s.a.createElement(
-                "div",
-                { className: "content" },
-                s.a.createElement(
-                  "a",
-                  {
-                    href: e.certificate_link,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  },
-                  s.a.createElement("div", { className: "content-overlay" }),
-                  s.a.createElement(
-                    "div",
-                    {
-                      className: "cert-header",
-                      style: { backgroundColor: e.color_code },
-                    },
-                    s.a.createElement("img", {
-                      className: "logo_img",
-                      src: a(32)("./".concat(e.logo_path)),
-                      alt: e.alt_name,
-                    })
-                  ),
-                  s.a.createElement(
-                    "div",
-                    { className: "content-details fadeIn-top" },
-                    s.a.createElement(
-                      "h3",
-                      { className: "content-title", style: { color: t.body } },
-                      "Certificate"
-                    )
-                  )
-                )
-              ),
-              s.a.createElement(
-                "div",
-                { className: "cert-body" },
-                s.a.createElement(
-                  "h2",
-                  { className: "cert-body-title", style: { color: t.text } },
-                  e.title
-                ),
-                s.a.createElement(
-                  "h3",
-                  {
-                    className: "cert-body-subtitle",
-                    style: { color: t.secondaryText },
-                  },
-                  e.subtitle
-                )
-              )
-            )
-          );
-        }
-      }
-      var Me = xe;
-      class ke extends r.Component {
-        render() {
-          const e = this.props.theme;
-          return s.a.createElement(
-            "div",
-            { className: "main", id: "certs" },
-            s.a.createElement(
-              "div",
-              { className: "certs-header-div" },
-              s.a.createElement(
-                u.Fade,
-                { bottom: !0, duration: 2e3, distance: "20px" },
-                s.a.createElement(
-                  "h1",
-                  { className: "certs-header", style: { color: e.text } },
-                  "Certifications"
-                )
-              )
-            ),
-            s.a.createElement(
-              "div",
-              { className: "certs-body-div" },
-              Z.certifications.map((t) =>
-                s.a.createElement(Me, { certificate: t, theme: e })
-              )
-            )
-          );
-        }
-      }
-      var Ze = ke;
+      r.Component;
+      r.Component;
       a(175);
-      class Ne extends s.a.Component {
+      class xe extends s.a.Component {
         render() {
           return s.a.createElement(
             "div",
@@ -4885,8 +4791,8 @@
           );
         }
       }
-      var De = Ne;
-      class Se extends r.Component {
+      var Me = xe;
+      class ke extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -5193,7 +5099,7 @@
         }
       }
       a(176);
-      class Ue extends r.Component {
+      class Ze extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -5212,7 +5118,7 @@
                   s.a.createElement(
                     "div",
                     { className: "heading-img-div" },
-                    s.a.createElement(Se, { theme: e })
+                    s.a.createElement(ke, { theme: e })
                   ),
                   s.a.createElement(
                     "div",
@@ -5230,23 +5136,20 @@
                       },
                       "Basic Qualification and Certifcations"
                     ),
-                    s.a.createElement(De, { logos: M.competitiveSites })
+                    s.a.createElement(Me, { logos: M.competitiveSites })
                   )
                 )
               ),
-              s.a.createElement(we, { theme: this.props.theme }),
-              Z.certifications.length > 0
-                ? s.a.createElement(Ze, { theme: this.props.theme })
-                : null
+              s.a.createElement(we, { theme: this.props.theme })
             ),
             s.a.createElement(he, { theme: this.props.theme }),
             s.a.createElement(de, { theme: this.props.theme })
           );
         }
       }
-      var Re = Ue;
+      var Ne = Ze;
       a(177);
-      class Be extends r.Component {
+      class De extends r.Component {
         render() {
           const e = this.props.experience,
             t = this.props.index,
@@ -5390,21 +5293,21 @@
           );
         }
       }
-      var Te = Be,
-        Fe = (a(178), a(312)),
-        Oe = a(310);
-      class Ie extends r.Component {
+      var Se = De,
+        Ue = (a(178), a(312)),
+        Re = a(310);
+      class Be extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
             "div",
             { className: "experience-accord" },
             s.a.createElement(
-              Fe.a,
+              Ue.a,
               null,
               this.props.sections.map((t) =>
                 s.a.createElement(
-                  Oe.a,
+                  Re.a,
                   {
                     className: "accord-panel",
                     title: t.title,
@@ -5428,7 +5331,7 @@
                     },
                   },
                   t.experiences.map((a, r) =>
-                    s.a.createElement(Te, {
+                    s.a.createElement(Se, {
                       index: r,
                       totalCards: t.experiences.length,
                       experience: a,
@@ -5441,9 +5344,9 @@
           );
         }
       }
-      var ze = Ie;
+      var Te = Be;
       a(180);
-      class Ge extends r.Component {
+      class Fe extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -5878,7 +5781,7 @@
           );
         }
       }
-      class He extends r.Component {
+      class Oe extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -5897,7 +5800,7 @@
                   s.a.createElement(
                     "div",
                     { className: "experience-heading-img-div" },
-                    s.a.createElement(Ge, { theme: e })
+                    s.a.createElement(Fe, { theme: e })
                   ),
                   s.a.createElement(
                     "div",
@@ -5930,7 +5833,7 @@
                 )
               )
             ),
-            s.a.createElement(ze, { sections: N.sections, theme: e }),
+            s.a.createElement(Te, { sections: N.sections, theme: e }),
             s.a.createElement(he, {
               theme: this.props.theme,
               onToggle: this.props.onToggle,
@@ -5939,16 +5842,16 @@
           );
         }
       }
-      var Xe = He,
-        je = a(41),
-        Le = (a(275), a(25));
-      class Pe extends r.Component {
+      var Ie = Oe,
+        ze = a(41),
+        Ge = (a(275), a(25));
+      class He extends r.Component {
         render() {
           const e = {
             labels: ["Open", "Merged", "Closed"],
             datasets: [
               {
-                data: [Le.open, Le.merged, Le.closed],
+                data: [Ge.open, Ge.merged, Ge.closed],
                 backgroundColor: ["#28a745", "#6f42c1", "#d73a49"],
                 hoverBackgroundColor: ["#28a745dd", "#6f42c1dd", "#d73a49dd"],
               },
@@ -5966,7 +5869,7 @@
                 "Pull Request Distribution"
               )
             ),
-            s.a.createElement(je.Doughnut, {
+            s.a.createElement(ze.Doughnut, {
               data: e,
               options: {
                 padding: "0",
@@ -5979,15 +5882,15 @@
           );
         }
       }
-      var Qe = Pe,
-        Ve = (a(276), a(31));
-      class qe extends r.Component {
+      var Xe = He,
+        je = (a(276), a(31));
+      class Le extends r.Component {
         render() {
           const e = {
             labels: ["Open", "Closed"],
             datasets: [
               {
-                data: [Ve.open, Ve.closed],
+                data: [je.open, je.closed],
                 backgroundColor: ["#28a745", "#d73a49"],
                 hoverBackgroundColor: ["#28a745dd", "#d73a49dd"],
               },
@@ -6005,7 +5908,7 @@
                 "Issue Distribution"
               )
             ),
-            s.a.createElement(je.Doughnut, {
+            s.a.createElement(ze.Doughnut, {
               data: e,
               options: {
                 margin: "0",
@@ -6018,9 +5921,9 @@
           );
         }
       }
-      var Je = qe;
+      var Pe = Le;
       a(277);
-      class We extends r.Component {
+      class Qe extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -6042,15 +5945,15 @@
             s.a.createElement(
               "div",
               { className: "os-charts-body-div" },
-              s.a.createElement(Qe, null),
-              s.a.createElement(Je, null)
+              s.a.createElement(Xe, null),
+              s.a.createElement(Pe, null)
             )
           );
         }
       }
-      var Ye = We;
+      var Ve = Qe;
       a(278), a(279);
-      class Ke extends r.Component {
+      class qe extends r.Component {
         render() {
           return s.a.createElement(
             "div",
@@ -6090,9 +5993,9 @@
           );
         }
       }
-      var _e = Ke,
-        $e = a(89);
-      class et extends r.Component {
+      var Je = qe,
+        We = a(89);
+      class Ye extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -6114,13 +6017,13 @@
                 )
               )
             ),
-            s.a.createElement(_e, { logos: $e.data })
+            s.a.createElement(Je, { logos: We.data })
           );
         }
       }
-      var tt = et;
+      var Ke = Ye;
       a(280), a(281);
-      class at extends r.Component {
+      class _e extends r.Component {
         render() {
           const e = this.props.pullRequest;
           var t, a;
@@ -6293,8 +6196,8 @@
           );
         }
       }
-      var rt = at;
-      class st extends r.Component {
+      var $e = _e;
+      class et extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -6319,14 +6222,14 @@
             s.a.createElement(
               "div",
               { className: "pull-request-body-div" },
-              Le.data.map((e) => s.a.createElement(rt, { pullRequest: e }))
+              Ge.data.map((e) => s.a.createElement($e, { pullRequest: e }))
             )
           );
         }
       }
-      var ot = st;
+      var tt = et;
       a(282), a(283);
-      class lt extends r.Component {
+      class at extends r.Component {
         render() {
           const e = this.props.issue;
           var t, a;
@@ -6462,8 +6365,8 @@
           );
         }
       }
-      var nt = lt;
-      class it extends r.Component {
+      var rt = at;
+      class st extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -6485,23 +6388,23 @@
             s.a.createElement(
               "div",
               { className: "issues-body-div" },
-              Ve.data.map((e) => s.a.createElement(nt, { issue: e }))
+              je.data.map((e) => s.a.createElement(rt, { issue: e }))
             )
           );
         }
       }
-      var ct = it;
+      var ot = st;
       a(284);
-      class mt extends r.Component {
+      class lt extends r.Component {
         render() {
           return s.a.createElement(
             "div",
             { className: "opensource-main" },
             s.a.createElement(P, { theme: this.props.theme }),
+            s.a.createElement(Ke, { theme: this.props.theme }),
+            s.a.createElement(Ve, { theme: this.props.theme }),
             s.a.createElement(tt, { theme: this.props.theme }),
-            s.a.createElement(Ye, { theme: this.props.theme }),
             s.a.createElement(ot, { theme: this.props.theme }),
-            s.a.createElement(ct, { theme: this.props.theme }),
             s.a.createElement(he, {
               theme: this.props.theme,
               onToggle: this.props.onToggle,
@@ -6510,8 +6413,8 @@
           );
         }
       }
-      var ht = mt;
-      class dt extends r.Component {
+      var nt = lt;
+      class it extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -6820,7 +6723,7 @@
           );
         }
       }
-      class ut extends r.Component {
+      class ct extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -7063,11 +6966,11 @@
         }
       }
       a(285);
-      const pt = T,
-        gt = F,
-        ft = O,
-        bt = I;
-      class Ct extends r.Component {
+      const mt = T,
+        ht = F,
+        dt = O,
+        ut = I;
+      class pt extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -7087,7 +6990,7 @@
                     "div",
                     { className: "contact-heading-img-div" },
                     s.a.createElement("img", {
-                      src: a(32)("./".concat(pt.profile_image_path)),
+                      src: a(32)("./".concat(mt.profile_image_path)),
                       alt: "",
                     })
                   ),
@@ -7100,7 +7003,7 @@
                         className: "contact-heading-text",
                         style: { color: e.text },
                       },
-                      pt.title
+                      mt.title
                     ),
                     s.a.createElement(
                       "p",
@@ -7108,7 +7011,7 @@
                         className: "contact-header-detail-text subTitle",
                         style: { color: e.secondaryText },
                       },
-                      pt.description
+                      mt.description
                     ),
                     s.a.createElement(J, { theme: e }),
                     s.a.createElement(
@@ -7139,7 +7042,7 @@
                         className: "blog-heading-text",
                         style: { color: e.text },
                       },
-                      gt.title
+                      ht.title
                     ),
                     s.a.createElement(
                       "p",
@@ -7147,7 +7050,7 @@
                         className: "blog-header-detail-text subTitle",
                         style: { color: e.secondaryText },
                       },
-                      gt.subtitle
+                      ht.subtitle
                     ),
                     s.a.createElement(
                       "div",
@@ -7155,7 +7058,7 @@
                       s.a.createElement(W, {
                         text: "Visit My Blogsite",
                         newTab: !0,
-                        href: gt.link,
+                        href: ht.link,
                         theme: e,
                       })
                     )
@@ -7163,7 +7066,7 @@
                   s.a.createElement(
                     "div",
                     { className: "blog-heading-img-div" },
-                    s.a.createElement(dt, { theme: e })
+                    s.a.createElement(it, { theme: e })
                   )
                 )
               ),
@@ -7176,7 +7079,7 @@
                   s.a.createElement(
                     "div",
                     { className: "contact-heading-img-div" },
-                    s.a.createElement(ut, { theme: e })
+                    s.a.createElement(ct, { theme: e })
                   ),
                   s.a.createElement(
                     "div",
@@ -7187,7 +7090,7 @@
                         className: "address-heading-text",
                         style: { color: e.text },
                       },
-                      ft.title
+                      dt.title
                     ),
                     s.a.createElement(
                       "p",
@@ -7195,7 +7098,7 @@
                         className: "contact-header-detail-text subTitle",
                         style: { color: e.secondaryText },
                       },
-                      ft.subtitle
+                      dt.subtitle
                     ),
                     s.a.createElement(
                       "h1",
@@ -7203,7 +7106,7 @@
                         className: "address-heading-text",
                         style: { color: e.text },
                       },
-                      bt.title
+                      ut.title
                     ),
                     s.a.createElement(
                       "p",
@@ -7211,7 +7114,7 @@
                         className: "contact-header-detail-text subTitle",
                         style: { color: e.secondaryText },
                       },
-                      bt.subtitle
+                      ut.subtitle
                     ),
                     s.a.createElement(
                       "div",
@@ -7219,7 +7122,7 @@
                       s.a.createElement(W, {
                         text: "Visit on Google Maps",
                         newTab: !0,
-                        href: ft.location_map_link,
+                        href: dt.location_map_link,
                         theme: e,
                       })
                     )
@@ -7235,9 +7138,9 @@
           );
         }
       }
-      var At = Ct;
+      var gt = pt;
       a(286);
-      class yt extends r.Component {
+      class ft extends r.Component {
         render() {
           return s.a.createElement(
             "div",
@@ -7279,9 +7182,9 @@
           );
         }
       }
-      var Et = yt;
+      var bt = ft;
       a(287);
-      function vt(e) {
+      function At(e) {
         let { repo: t, theme: a } = e;
         return s.a.createElement(
           "div",
@@ -7343,7 +7246,7 @@
                   "Created on ",
                   t.createdAt.split("T")[0]
                 ),
-                s.a.createElement(Et, {
+                s.a.createElement(bt, {
                   className: "repo-languages",
                   logos: t.languages,
                 })
@@ -7353,7 +7256,7 @@
         );
       }
       a(288);
-      function wt(e) {
+      function Ct(e) {
         let { pub: t, theme: a } = e;
         return s.a.createElement(
           "div",
@@ -7407,9 +7310,9 @@
           )
         );
       }
-      var xt = a(90);
+      var yt = a(90);
       a(289);
-      class Mt extends r.Component {
+      class Et extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -8093,7 +7996,7 @@
           );
         }
       }
-      class kt extends r.Component {
+      class vt extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -8112,7 +8015,7 @@
                   s.a.createElement(
                     "div",
                     { className: "projects-heading-img-div" },
-                    s.a.createElement(Mt, { theme: e })
+                    s.a.createElement(Et, { theme: e })
                   ),
                   s.a.createElement(
                     "div",
@@ -8140,7 +8043,7 @@
             s.a.createElement(
               "div",
               { className: "repo-cards-div-main" },
-              xt.data.map((t) => s.a.createElement(vt, { repo: t, theme: e }))
+              yt.data.map((t) => s.a.createElement(At, { repo: t, theme: e }))
             ),
             s.a.createElement(W, {
               text: "More Projects",
@@ -8186,7 +8089,7 @@
             s.a.createElement(
               "div",
               { className: "repo-cards-div-main" },
-              B.data.map((t) => s.a.createElement(wt, { pub: t, theme: e }))
+              B.data.map((t) => s.a.createElement(Ct, { pub: t, theme: e }))
             ),
             s.a.createElement(he, {
               theme: this.props.theme,
@@ -8196,9 +8099,9 @@
           );
         }
       }
-      var Zt = kt;
+      var wt = vt;
       a(290);
-      class Nt extends r.Component {
+      class xt extends r.Component {
         render() {
           const e = this.props.theme;
           return s.a.createElement(
@@ -8239,7 +8142,7 @@
           );
         }
       }
-      class Dt extends r.Component {
+      class Mt extends r.Component {
         render() {
           return s.a.createElement(
             h.a,
@@ -8253,7 +8156,7 @@
                 render: (e) =>
                   p
                     ? s.a.createElement(
-                        Ae,
+                        Ce,
                         Object.assign({}, e, { theme: this.props.theme })
                       )
                     : s.a.createElement(
@@ -8274,7 +8177,7 @@
                 exact: !0,
                 render: (e) =>
                   s.a.createElement(
-                    Xe,
+                    Ie,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               }),
@@ -8282,7 +8185,7 @@
                 path: "/education",
                 render: (e) =>
                   s.a.createElement(
-                    Re,
+                    Ne,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               }),
@@ -8290,7 +8193,7 @@
                 path: "/opensource",
                 render: (e) =>
                   s.a.createElement(
-                    ht,
+                    nt,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               }),
@@ -8298,7 +8201,7 @@
                 path: "/contact",
                 render: (e) =>
                   s.a.createElement(
-                    At,
+                    gt,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               }),
@@ -8307,7 +8210,7 @@
                   path: "/splash",
                   render: (e) =>
                     s.a.createElement(
-                      Ae,
+                      Ce,
                       Object.assign({}, e, { theme: this.props.theme })
                     ),
                 }),
@@ -8315,7 +8218,7 @@
                 path: "/projects",
                 render: (e) =>
                   s.a.createElement(
-                    Zt,
+                    wt,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               }),
@@ -8323,7 +8226,7 @@
                 path: "*",
                 render: (e) =>
                   s.a.createElement(
-                    Nt,
+                    xt,
                     Object.assign({}, e, { theme: this.props.theme })
                   ),
               })
@@ -8331,7 +8234,7 @@
           );
         }
       }
-      const St = {
+      const kt = {
         body: "#EDF9FE",
         text: "#001C55",
         expTxtColor: "#000a12",
@@ -8344,10 +8247,10 @@
         headerColor: "#0E6BA877",
         splashBg: "#001C55",
       };
-      var Ut;
-      const Rt = Object(V.b)(
-        Ut ||
-          (Ut = Object(Q.a)([
+      var Zt;
+      const Nt = Object(V.b)(
+        Zt ||
+          (Zt = Object(Q.a)([
             "\n  *,\n  *::after,\n  *::before {\n    box-sizing: border-box;\n  }\n\n  body {\n    align-items: center;\n    background: ",
             ";\n    color: ",
             ";\n    display: flex;\n    // flex-direction: column;\n    // justify-content: center;\n    // height: 100vh;\n    // margin: 0;\n    // padding: 0;\n    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\n    transition: all 0.25s linear;\n  }",
@@ -8361,15 +8264,15 @@
           return t.text;
         }
       );
-      var Bt = function () {
+      var Dt = function () {
         return s.a.createElement(
           V.a,
-          { theme: St },
+          { theme: kt },
           s.a.createElement(
             s.a.Fragment,
             null,
-            s.a.createElement(Rt, null),
-            s.a.createElement("div", null, s.a.createElement(Dt, { theme: St }))
+            s.a.createElement(Nt, null),
+            s.a.createElement("div", null, s.a.createElement(Mt, { theme: kt }))
           )
         );
       };
@@ -8381,12 +8284,12 @@
           )
       );
       a(291);
-      const Tt = new m.a();
+      const St = new m.a();
       l.a.render(
         s.a.createElement(
           c.a,
-          { value: Tt },
-          s.a.createElement(n.a, { theme: i.a }, s.a.createElement(Bt, null))
+          { value: St },
+          s.a.createElement(n.a, { theme: i.a }, s.a.createElement(Dt, null))
         ),
         document.getElementById("root")
       ),
@@ -8398,4 +8301,4 @@
   ]),
   [[92, 1, 2]],
 ]);
-//# sourceMappingURL=main.f44651d3.chunk.js.map
+//# sourceMappingURL=main.5dce0343.chunk.js.map
