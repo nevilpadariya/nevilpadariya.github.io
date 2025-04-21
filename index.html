@@ -86,11 +86,11 @@
             </a>
           </li>
 
-          <li class="education" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="400">
+          <!-- <li class="education" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="400">
             <a href="#education" aria-label="education menu button">
               &#60;/Education&#62;
             </a>
-          </li>
+          </li> -->
 
           <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#skills" aria-label="skills menu button">
@@ -109,11 +109,11 @@
               &#60;/Projects&#62;
             </a>
           </li>
-          <!-- <li class="contact" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="800">
+          <li class="contact" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="800">
             <a href="#contact" aria-label="contact menu button">
               &#60;/Contact&#62;
             </a>
-          </li> -->
+          </li>
         </ul>
       </div>
       <!-- navbar tabs ends -->
@@ -147,11 +147,11 @@
           </a>
         </li>
         
-        <li id="education-mobile-tab" class="mobile-navbar-tabs-li education" onclick="hidemenubyli()">
+        <!-- <li id="education-mobile-tab" class="mobile-navbar-tabs-li education" onclick="hidemenubyli()">
           <a href="#education" tabindex="0" aria-label="education menu button">
             &#60;/Education&#62;
           </a>
-        </li>
+        </li> -->
         
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
@@ -168,11 +168,11 @@
             &#60;/Projects&#62;
           </a>
         </li>
-        <!-- <li id="contact-mobile-tab" class="mobile-navbar-tabs-li contact" onclick="hidemenubyli()">
+        <li id="contact-mobile-tab" class="mobile-navbar-tabs-li contact" onclick="hidemenubyli()">
           <a href="#contact" tabindex="0" aria-label="contact menu button">
             &#60;/Contact&#62;
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
     <!-- mobile toggle menu ends -->
@@ -314,7 +314,10 @@
               Currently, I'm deeply involved in exciting projects such as analyzing real-time data to detect insider trading patterns and enhancing educational technology platforms. I'm passionate about using my technical skills to create impactful, user-focused applications and continually seek new challenges that allow me to grow and innovate.
             </p>
             <!-- Resume button -->
-            <button class="resume-btn" id="resume-btn" onclick="openURL()">
+            <button class="resume-btn" id="resume-btn" onclick="openURL()" onclick="gtag('event', 'click', {
+              'event_category': 'Portfolio',
+              'event_label': 'Resume_Button'
+            });" >
               <div class="sign">
                 <svg viewBox="0 0 640 512">
                   <path
