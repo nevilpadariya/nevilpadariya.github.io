@@ -23,8 +23,12 @@ function visualmode() {
     });
 }
 window.addEventListener("load", function () {
-  (loader.style.display = "none"),
-    document.querySelector(".hey").classList.add("popup");
+  loader.style.display = "none";
+  document.querySelector(".hey").classList.add("popup");
+  document.body.classList.add("stopscrolling");
+  setTimeout(() => {
+    document.body.classList.remove("stopscrolling");
+  }, 3500);
 });
 let emptyArea = document.getElementById("emptyarea"),
   mobileTogglemenu = document.getElementById("mobiletogglemenu");
@@ -63,7 +67,18 @@ const sections = document.querySelectorAll("section"),
   mobilenavLi = document.querySelectorAll(
     ".mobiletogglemenu .mobile-navbar-tabs-ul li"
   );
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > 50) {
+    navbar.classList.add("navbar-shrink");
+    document.body.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("navbar-shrink");
+    document.body.classList.remove("scrolled");
+  }
+  lastScrollTop = scrollTop;
   let e = "";
   sections.forEach((t) => {
     let o = t.offsetTop;
