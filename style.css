@@ -39,7 +39,7 @@ body {
 
 #backtotopbutton article,
 :root {
-  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: 'Google Sans Flex', Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif;
 }
 
@@ -361,10 +361,26 @@ noscript {
   background-color: transparent;
 }
 
+.scroll-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: var(--color-dark-mode);
+  z-index: 998;
+  transition: height 0.4s ease-in-out;
+}
+
+body.scrolled .scroll-mask {
+  height: 10px;
+}
+
 .navbar {
   background-image: linear-gradient(to bottom right,
       var(--tech-stack-box-first-color),
       var(--tech-stack-box-second-color));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   height: 80px;
   width: 80%;
@@ -373,6 +389,20 @@ noscript {
   z-index: 999;
   border: 1px solid var(--color-navbarBorder-dark);
   border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  top: 20px;
+}
+
+.navbar-shrink {
+  top: 10px;
+  height: 50px;
+  width: 70%;
+  border-radius: 30px;
+  background-image: linear-gradient(to bottom right,
+      rgba(var(--tech-stack-box-first-color-rgb), 0.8),
+      rgba(var(--tech-stack-box-second-color-rgb), 0.8));
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 
 .navbar-tabs,
@@ -397,8 +427,28 @@ noscript {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  gap: 80px;
+  gap: 60px;
   color: var(--color-white);
+  transition: gap 0.4s ease-in-out;
+}
+
+.activeThistab a {
+  background: linear-gradient(-45deg,
+      var(--color-light-blue),
+      var(--color-light-purple),
+      var(--color-light-blue),
+      var(--color-light-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-animation: 3s infinite gradient;
+  animation: 3s infinite gradient;
+  font-weight: 700;
+}
+
+.navbar-shrink .navbar-tabs-ul {
+  gap: 40px;
 }
 
 .navbar-tabs-ul li {
@@ -612,6 +662,7 @@ noscript {
 #work {
   font-size: 8rem;
   width: fit-content;
+  margin: 0;
 }
 
 #name,
@@ -1635,12 +1686,27 @@ footer {
   html {
     font-size: 60%;
   }
+  .navbar-tabs-ul{gap: 40px;}
 }
+.navbar-shrink .navbar-tabs-ul {
+  gap: 30px;
+}
+.navbar-shrink .activeThistab::before, .navbar-tabs-ul li:hover::before {width: 7px;height: 7px;left: -10px;}
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 60%;
   }
+  .navbar-tabs-ul{gap: 20px;}
+  
+  .navbar-shrink {
+    width: 80%;
+  }
+  .navbar-shrink .navbar-tabs-ul {
+    gap: 25px;
+  }
+  
+  
 
   .projects-section-div,
   .skills-section,
@@ -1698,7 +1764,8 @@ footer {
   }
 
   .stopscrolling {
-    overflow: hidden;
+    overflow: hidden !important;
+    height: 100% !important;
   }
 
   .hamburger {
@@ -1707,9 +1774,19 @@ footer {
     width: 100vw;
     height: 115px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     z-index: 9998;
+  }
+
+  body.scrolled .hamburger {
+    height: 70px;
+    transition: height 0.3s ease;
+  }
+
+  body.scrolled #hamburger-button {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
   }
 
   .activeThismobiletab:before,
@@ -1727,6 +1804,11 @@ footer {
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+    transition: width 0.4s ease-in-out;
+  }
+
+  body.scrolled .hamburgerbase {
+    width: 60%;
   }
 
   #hamburger-button {
@@ -1951,7 +2033,7 @@ footer {
   #hamburger {
     margin-right: 20px;
     height: 115px;
-    align-items: flex-end;
+    align-items: center;
   }
 
   #hello-friend,
