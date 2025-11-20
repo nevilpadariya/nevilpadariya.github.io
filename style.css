@@ -396,7 +396,7 @@ body.scrolled .scroll-mask {
 .navbar-shrink {
   top: 10px;
   height: 50px;
-  width: 60%;
+  width: 70%;
   border-radius: 30px;
   background-image: linear-gradient(to bottom right,
       rgba(var(--tech-stack-box-first-color-rgb), 0.8),
@@ -427,7 +427,7 @@ body.scrolled .scroll-mask {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  gap: 70px;
+  gap: 60px;
   color: var(--color-white);
   transition: gap 0.4s ease-in-out;
 }
@@ -1688,12 +1688,25 @@ footer {
   }
   .navbar-tabs-ul{gap: 40px;}
 }
+.navbar-shrink .navbar-tabs-ul {
+  gap: 30px;
+}
+.navbar-shrink .activeThistab::before, .navbar-tabs-ul li:hover::before {width: 7px;height: 7px;left: -10px;}
 
 @media screen and (max-width: 1200px) {
   html {
     font-size: 60%;
   }
-  .navbar-tabs-ul{gap: 30px;}
+  .navbar-tabs-ul{gap: 20px;}
+  
+  .navbar-shrink {
+    width: 80%;
+  }
+  .navbar-shrink .navbar-tabs-ul {
+    gap: 25px;
+  }
+  
+  
 
   .projects-section-div,
   .skills-section,
@@ -1761,9 +1774,19 @@ footer {
     width: 100vw;
     height: 115px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     z-index: 9998;
+  }
+
+  body.scrolled .hamburger {
+    height: 70px;
+    transition: height 0.3s ease;
+  }
+
+  body.scrolled #hamburger-button {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
   }
 
   .activeThismobiletab:before,
@@ -1781,6 +1804,11 @@ footer {
     align-items: center;
     justify-content: flex-end;
     padding: 20px;
+    transition: width 0.4s ease-in-out;
+  }
+
+  body.scrolled .hamburgerbase {
+    width: 60%;
   }
 
   #hamburger-button {
@@ -2005,7 +2033,7 @@ footer {
   #hamburger {
     margin-right: 20px;
     height: 115px;
-    align-items: flex-end;
+    align-items: center;
   }
 
   #hello-friend,
