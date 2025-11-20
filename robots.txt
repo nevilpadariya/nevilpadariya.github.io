@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://nevilpadariya.github.io/sitemap.xml
