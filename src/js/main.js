@@ -23,12 +23,21 @@ function visualmode() {
     });
 }
 window.addEventListener("load", function () {
-  loader.style.display = "none";
-  document.querySelector(".hey").classList.add("popup");
-  document.body.classList.add("stopscrolling");
-  setTimeout(() => {
-    document.body.classList.remove("stopscrolling");
-  }, 3500);
+  if (loader) {
+    loader.style.display = "none";
+  }
+  const heyElement = document.querySelector(".hey");
+  if (heyElement) {
+    heyElement.classList.add("popup");
+  }
+  // Remove stopscrolling immediately on mobile for better UX
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (!isMobile) {
+    document.body.classList.add("stopscrolling");
+    setTimeout(() => {
+      document.body.classList.remove("stopscrolling");
+    }, 3500);
+  }
 });
 let emptyArea = document.getElementById("emptyarea"),
   mobileTogglemenu = document.getElementById("mobiletogglemenu");
@@ -69,8 +78,22 @@ const sections = document.querySelectorAll("section"),
   );
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
+const scrollProgressBar = document.getElementById("scrollProgressBar");
+
+// Throttle scroll events for better mobile performance
+let ticking = false;
+function updateOnScroll() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Calculate scroll progress
+  const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollProgress = windowHeight > 0 ? (scrollTop / windowHeight) * 100 : 0;
+  
+  // Update progress bar width
+  if (scrollProgressBar) {
+    scrollProgressBar.style.width = scrollProgress + "%";
+  }
+  
   if (scrollTop > 50) {
     navbar.classList.add("navbar-shrink");
     document.body.classList.add("scrolled");
@@ -79,20 +102,38 @@ window.addEventListener("scroll", () => {
     document.body.classList.remove("scrolled");
   }
   lastScrollTop = scrollTop;
+  
   let e = "";
   sections.forEach((t) => {
     let o = t.offsetTop;
-    t.clientHeight, pageYOffset >= o - 200 && (e = t.getAttribute("id"));
-  }),
-    mobilenavLi.forEach((t) => {
-      t.classList.remove("activeThismobiletab"),
-        t.classList.contains(e) && t.classList.add("activeThismobiletab");
-    }),
-    navLi.forEach((t) => {
-      t.classList.remove("activeThistab"),
-        t.classList.contains(e) && t.classList.add("activeThistab");
-    });
-});
+    if (scrollTop >= o - 200) {
+      e = t.getAttribute("id");
+    }
+  });
+  
+  mobilenavLi.forEach((t) => {
+    t.classList.remove("activeThismobiletab");
+    if (t.classList.contains(e)) {
+      t.classList.add("activeThismobiletab");
+    }
+  });
+  
+  navLi.forEach((t) => {
+    t.classList.remove("activeThistab");
+    if (t.classList.contains(e)) {
+      t.classList.add("activeThistab");
+    }
+  });
+  
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateOnScroll);
+    ticking = true;
+  }
+}, { passive: true });
 
 let mybutton = document.getElementById("backtotopbutton");
 function scrollFunction() {

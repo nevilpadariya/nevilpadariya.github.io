@@ -35,6 +35,8 @@ noscript {
 .main,
 body {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 #backtotopbutton article,
@@ -88,6 +90,16 @@ html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth slow scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -359,6 +371,37 @@ noscript {
   height: 0;
   width: 0%;
   background-color: transparent;
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg,
+      var(--color-light-blue),
+      var(--color-light-purple),
+      var(--color-light-blue),
+      var(--color-light-purple));
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  z-index: 9999;
+  transition: width 0.1s ease-out, background-position 0.3s ease;
+  animation: gradient-shift 3s ease infinite;
+  box-shadow: 0 2px 10px rgba(107, 197, 248, 0.5);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .scroll-mask {
@@ -1887,6 +1930,9 @@ footer {
     align-items: center;
     gap: 70px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.176);
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .mobile-navbar-tabs-li {
@@ -1900,7 +1946,18 @@ footer {
     cursor: pointer;
     font-family: fira code;
     height: 30px;
-    width: fit-content;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .mobile-navbar-tabs-li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
   }
 
   .about-info,
@@ -1935,8 +1992,22 @@ footer {
     position: absolute;
     height: 10px;
     width: 10px;
-    left: -20px;
+    left: 50%;
+    transform: translateX(calc(-50% - 80px));
     border-radius: 50%;
+    background-color: var(--color-white);
+  }
+
+  @media screen and (max-width: 500px) {
+    .activeThismobiletab:before {
+      transform: translateX(calc(-50% - 70px));
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .activeThismobiletab:before {
+      transform: translateX(calc(-50% - 60px));
+    }
   }
 
   .projects-section-div {
