@@ -1855,15 +1855,15 @@ footer {
   body.scrolled .hamburgerbase {
     width: 70%;
     height: 50px;
-    padding: 10px 20px;
+    padding: 0 0px 10px;
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out, padding 0.4s ease-in-out;
   }
 
   #hamburger-button {
     font-size: 3rem;
     font-weight: 800;
-    width: 4.5rem;
-    height: 3.5rem;
+    width: 28px;
+    height: 20px;
     border: none;
     display: flex;
     flex-direction: column;
@@ -2007,6 +2007,10 @@ footer {
     .activeThismobiletab:before {
       transform: translateX(calc(-50% - 70px));
     }
+      body.scrolled .hamburgerbase {
+          padding: 10px 0px 5px;
+      }
+
   }
 
   @media screen and (max-width: 375px) {
@@ -2085,6 +2089,30 @@ footer {
   .logo:hover {
     transform: translateY(200px);
     transition-duration: 1s;
+  }
+
+  body.scrolled .hamburgerbase {
+    padding: 0px 0px 10px;
+  }
+
+  body.scrolled #hamburger-button {
+    width: 28px;
+    height: 20px;
+  }
+
+  body.scrolled #burger-bar1,
+  body.scrolled #burger-bar2,
+  body.scrolled #burger-bar3 {
+    height: 2px;
+  }
+
+  body.scrolled #burger-bar1,
+  body.scrolled #burger-bar3 {
+    width: 60%;
+  }
+
+  body.scrolled #burger-bar2 {
+    width: 100%;
   }
 
   .projects-section-div {
@@ -2309,6 +2337,12 @@ footer {
 
 .pe-none {
   pointer-events: none;
+}
+
+@media screen and (max-width: 500px) {
+  body.scrolled .hamburgerbase {
+      padding: 10px 0px 5px;
+  }
 }
 
 /* contact section */
