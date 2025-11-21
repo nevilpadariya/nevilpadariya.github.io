@@ -1790,9 +1790,23 @@ footer {
   }
   .dp.aos-init.aos-animate{margin-bottom: 0;}
 
-  .activeThismobiletab,
   .mobile-navbar-tabs-ul a {
     color: var(--color-white);
+  }
+
+  .activeThismobiletab a {
+    background: linear-gradient(-45deg,
+        var(--color-light-blue),
+        var(--color-light-purple),
+        var(--color-light-blue),
+        var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    -webkit-animation: 3s infinite gradient;
+    animation: 3s infinite gradient;
+    font-weight: 700;
   }
 
   html {
