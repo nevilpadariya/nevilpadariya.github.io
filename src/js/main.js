@@ -1,21 +1,41 @@
-var audio = document.getElementById("audioPlayer"),
-  loader = document.getElementById("preloader");
+/**
+ * Audio player and preloader elements
+ * @type {HTMLAudioElement | null}
+ */
+const audio = document.getElementById("audioPlayer");
+const loader = document.getElementById("preloader");
+
+/**
+ * Toggles the settings container and related UI elements
+ */
 function settingtoggle() {
-  document
-    .getElementById("setting-container")
-    .classList.toggle("settingactivate"),
-    document
-      .getElementById("visualmodetogglebuttoncontainer")
-      .classList.toggle("visualmodeshow"),
-    document
-      .getElementById("soundtogglebuttoncontainer")
-      .classList.toggle("soundmodeshow");
+  const settingContainer = document.getElementById("setting-container");
+  const visualModeContainer = document.getElementById("visualmodetogglebuttoncontainer");
+  const soundContainer = document.getElementById("soundtogglebuttoncontainer");
+  
+  if (settingContainer) {
+    settingContainer.classList.toggle("settingactivate");
+  }
+  if (visualModeContainer) {
+    visualModeContainer.classList.toggle("visualmodeshow");
+  }
+  if (soundContainer) {
+    soundContainer.classList.toggle("soundmodeshow");
+  }
 }
+/**
+ * Toggles audio playback based on sound switch state
+ */
 function playpause() {
-  !1 == document.getElementById("switchforsound").checked
-    ? audio.pause()
-    : audio.play();
+  const soundSwitch = document.getElementById("switchforsound");
+  if (soundSwitch && audio) {
+    soundSwitch.checked ? audio.play() : audio.pause();
+  }
 }
+
+/**
+ * Toggles between light and dark mode
+ */
 function visualmode() {
   document.body.classList.toggle("light-mode"),
     document.querySelectorAll(".needtobeinvert").forEach(function (e) {
@@ -39,48 +59,57 @@ window.addEventListener("load", function () {
     }, 3500);
   }
 });
-let emptyArea = document.getElementById("emptyarea"),
-  mobileTogglemenu = document.getElementById("mobiletogglemenu");
+// Mobile menu toggle element (cached for performance)
+const mobileTogglemenu = document.getElementById("mobiletogglemenu");
+/**
+ * Toggles the mobile hamburger menu visibility and animations
+ */
 function hamburgerMenu() {
-  document.body.classList.toggle("stopscrolling"),
-    document
-      .getElementById("mobiletogglemenu")
-      .classList.toggle("show-toggle-menu"),
-    document
-      .getElementById("burger-bar1")
-      .classList.toggle("hamburger-animation1"),
-    document
-      .getElementById("burger-bar2")
-      .classList.toggle("hamburger-animation2"),
-    document
-      .getElementById("burger-bar3")
-      .classList.toggle("hamburger-animation3");
+  document.body.classList.toggle("stopscrolling");
+  
+  const menu = document.getElementById("mobiletogglemenu");
+  const bar1 = document.getElementById("burger-bar1");
+  const bar2 = document.getElementById("burger-bar2");
+  const bar3 = document.getElementById("burger-bar3");
+  
+  if (menu) menu.classList.toggle("show-toggle-menu");
+  if (bar1) bar1.classList.toggle("hamburger-animation1");
+  if (bar2) bar2.classList.toggle("hamburger-animation2");
+  if (bar3) bar3.classList.toggle("hamburger-animation3");
 }
+/**
+ * Hides the mobile menu when a menu item is clicked
+ */
 function hidemenubyli() {
-  document.body.classList.toggle("stopscrolling"),
-    document
-      .getElementById("mobiletogglemenu")
-      .classList.remove("show-toggle-menu"),
-    document
-      .getElementById("burger-bar1")
-      .classList.remove("hamburger-animation1"),
-    document
-      .getElementById("burger-bar2")
-      .classList.remove("hamburger-animation2"),
-    document
-      .getElementById("burger-bar3")
-      .classList.remove("hamburger-animation3");
+  document.body.classList.remove("stopscrolling");
+  
+  const menu = document.getElementById("mobiletogglemenu");
+  const bar1 = document.getElementById("burger-bar1");
+  const bar2 = document.getElementById("burger-bar2");
+  const bar3 = document.getElementById("burger-bar3");
+  
+  if (menu) menu.classList.remove("show-toggle-menu");
+  if (bar1) bar1.classList.remove("hamburger-animation1");
+  if (bar2) bar2.classList.remove("hamburger-animation2");
+  if (bar3) bar3.classList.remove("hamburger-animation3");
 }
-const sections = document.querySelectorAll("section"),
-  navLi = document.querySelectorAll(".navbar .navbar-tabs .navbar-tabs-ul li"),
-  mobilenavLi = document.querySelectorAll(
-    ".mobiletogglemenu .mobile-navbar-tabs-ul li"
-  );
+/**
+ * Navigation elements cached for performance
+ */
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".navbar .navbar-tabs .navbar-tabs-ul li");
+const mobilenavLi = document.querySelectorAll(".mobiletogglemenu .mobile-navbar-tabs-ul li");
+/**
+ * Scroll tracking and UI elements
+ */
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 const scrollProgressBar = document.getElementById("scrollProgressBar");
 
-// Throttle scroll events for better mobile performance
+/**
+ * Throttled scroll handler for better mobile performance
+ * Updates scroll progress bar, navbar state, and active section highlighting
+ */
 let ticking = false;
 function updateOnScroll() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -103,25 +132,28 @@ function updateOnScroll() {
   }
   lastScrollTop = scrollTop;
   
-  let e = "";
-  sections.forEach((t) => {
-    let o = t.offsetTop;
-    if (scrollTop >= o - 200) {
-      e = t.getAttribute("id");
+  // Find the current active section
+  let activeSectionId = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollTop >= sectionTop - 200) {
+      activeSectionId = section.getAttribute("id") || "";
     }
   });
   
-  mobilenavLi.forEach((t) => {
-    t.classList.remove("activeThismobiletab");
-    if (t.classList.contains(e)) {
-      t.classList.add("activeThismobiletab");
+  // Update mobile navigation active state
+  mobilenavLi.forEach((navItem) => {
+    navItem.classList.remove("activeThismobiletab");
+    if (activeSectionId && navItem.classList.contains(activeSectionId)) {
+      navItem.classList.add("activeThismobiletab");
     }
   });
   
-  navLi.forEach((t) => {
-    t.classList.remove("activeThistab");
-    if (t.classList.contains(e)) {
-      t.classList.add("activeThistab");
+  // Update desktop navigation active state
+  navLi.forEach((navItem) => {
+    navItem.classList.remove("activeThistab");
+    if (activeSectionId && navItem.classList.contains(activeSectionId)) {
+      navItem.classList.add("activeThistab");
     }
   });
   
@@ -135,14 +167,29 @@ window.addEventListener("scroll", () => {
   }
 }, { passive: true });
 
-let mybutton = document.getElementById("backtotopbutton");
+/**
+ * Back to top button element
+ * @type {HTMLElement | null}
+ */
+const mybutton = document.getElementById("backtotopbutton");
+
+/**
+ * Shows/hides the back to top button based on scroll position
+ */
 function scrollFunction() {
-  document.body.scrollTop > 400 || document.documentElement.scrollTop > 400
-    ? (mybutton.style.display = "block")
-    : (mybutton.style.display = "none");
+  if (!mybutton) return;
+  
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  mybutton.style.display = scrollTop > 400 ? "block" : "none";
 }
+/**
+ * Smoothly scrolls to the top of the page
+ */
 function scrolltoTopfunction() {
-  (document.body.scrollTop = 0), (document.documentElement.scrollTop = 0);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 (window.onscroll = function () {
   scrollFunction();
@@ -150,37 +197,49 @@ function scrolltoTopfunction() {
   document.addEventListener(
     "contextmenu",
     function (e) {
-      "IMG" === e.target.nodeName && e.preventDefault();
+      if (e.target.nodeName === "IMG") {
+        e.preventDefault();
+      }
     },
-    !1
+    false
   );
-let Pupils = document.getElementsByClassName("footer-pupil"),
-  pupilsArr = Array.from(Pupils),
-  pupilStartPoint = -10,
-  pupilRangeX = 20,
-  pupilRangeY = 15,
-  mouseXStartPoint = 0,
-  mouseXEndPoint = window.innerWidth,
-  currentXPosition = 0,
-  fracXValue = 0,
-  mouseYEndPoint = window.innerHeight,
-  currentYPosition = 0,
-  fracYValue = 0,
-  mouseXRange = mouseXEndPoint - mouseXStartPoint;
+/**
+ * Footer avatar pupil animation configuration
+ */
+const Pupils = document.getElementsByClassName("footer-pupil");
+const pupilsArr = Array.from(Pupils);
+const pupilStartPoint = -10;
+const pupilRangeX = 20;
+const pupilRangeY = 15;
+let mouseXStartPoint = 0;
+let mouseXEndPoint = window.innerWidth;
+let mouseYEndPoint = window.innerHeight;
+let mouseXRange = mouseXEndPoint - mouseXStartPoint;
+
+/**
+ * Handles mouse movement for footer avatar pupil animation
+ * @param {MouseEvent} e - Mouse event object
+ */
 const mouseMove = (e) => {
-    (fracXValue =
-      (currentXPosition = e.clientX - mouseXStartPoint) / mouseXRange),
-      (fracYValue = (currentYPosition = e.clientY) / mouseYEndPoint);
-    let t = pupilStartPoint + fracXValue * pupilRangeX,
-      o = pupilStartPoint + fracYValue * pupilRangeY;
-    pupilsArr.forEach((e) => {
-      e.style.transform = `translate(${t}px, ${o}px)`;
-    });
-  },
-  windowResize = (e) => {
-    (mouseXEndPoint = window.innerWidth),
-      (mouseYEndPoint = window.innerHeight),
-      (mouseXRange = mouseXEndPoint - mouseXStartPoint);
-  };
+  const currentXPosition = e.clientX - mouseXStartPoint;
+  const currentYPosition = e.clientY;
+  const fracXValue = currentXPosition / mouseXRange;
+  const fracYValue = currentYPosition / mouseYEndPoint;
+  const t = pupilStartPoint + fracXValue * pupilRangeX;
+  const o = pupilStartPoint + fracYValue * pupilRangeY;
+  
+  pupilsArr.forEach((pupil) => {
+    pupil.style.transform = `translate(${t}px, ${o}px)`;
+  });
+};
+
+/**
+ * Handles window resize for footer avatar animation
+ */
+const windowResize = () => {
+  mouseXEndPoint = window.innerWidth;
+  mouseYEndPoint = window.innerHeight;
+  mouseXRange = mouseXEndPoint - mouseXStartPoint;
+};
 window.addEventListener("mousemove", mouseMove),
   window.addEventListener("resize", windowResize);
