@@ -2990,9 +2990,10 @@ footer {
 }
 
 .education-degree {
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
   color: #6bc5f8;
+  font-weight: 700;
 }
 
 .education-institution {
@@ -3003,17 +3004,18 @@ footer {
 }
 
 .institution-name {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .education-duration {
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-light-purple);
 }
 
 .education-description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #ddd;
 }
@@ -3036,8 +3038,9 @@ footer {
 .course-list li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 6px;
-  line-height: 1.4;
+  margin-bottom: 10px;
+  line-height: 2.5rem;
+  font-size: 1.7rem;
 }
 
 .course-list li::before {
@@ -3068,6 +3071,15 @@ footer {
   }
   
   .education-degree {
-    font-size: 1.3rem;
+    font-size: 2.2rem;
+  }
+  
+  .institution-name {
+    font-size: 1.8rem;
+  }
+  
+  .course-list li {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
 }
