@@ -111,9 +111,6 @@
   <div class="scroll-progress-bar" id="scrollProgressBar"></div>
   <div class="custom-cursor__cursor"></div>
   <div class="custom-cursor__cursor-two"></div>
-  <!-- <audio loop="" id="audioPlayer" style="display: none">
-    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
-  </audio> -->
   <div id="preloader"></div>
   <div class="scroll-mask"></div>
   <noscript>Allow Javascript</noscript>
@@ -140,12 +137,6 @@
               &#60;/AboutMe&#62;
             </a>
           </li>
-
-          <!-- <li class="education" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="400">
-            <a href="#education" aria-label="education menu button">
-              &#60;/Education&#62;
-            </a>
-          </li> -->
 
           <li class="skills navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#skills" aria-label="skills menu button">
@@ -201,12 +192,6 @@
             &#60;/AboutMe&#62;
           </a>
         </li>
-        
-        <!-- <li id="education-mobile-tab" class="mobile-navbar-tabs-li education" onclick="hidemenubyli()">
-          <a href="#education" tabindex="0" aria-label="education menu button">
-            &#60;/Education&#62;
-          </a>
-        </li> -->
         
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
@@ -321,25 +306,6 @@
               <p class="letsTalkBtn-text">Let's Connect!</p>
               <span class="letsTalkBtn-BG"></span>
             </button></a>
-          <!-- <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-              aria-label="settings for sound and appearance"></label>
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
-              <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                class="needtobeinvert"></label>
-            </div>
-          </div> -->
-          <!-- setting div ends -->
         </div>
         <!-- contact-btn-div -->
       </div>
@@ -530,17 +496,7 @@
             aria-label="Programming languages and tools I am proficient in">
             Programming Languages & Tools
           </h3>
-          <!-- 
-            Note: You'll need to add these image files to your src/png directory:
-            - cpp-logo.png (for C/C++)
-            - java-logo.png (for Java)
-            - python-logo.png (for Python)
-            - jira-logo.png (for Jira)
-            - aws-logo.png (for AWS)
-            
-            Make sure the images have transparent backgrounds and are properly sized
-            to match your existing tech stack logos.
-          -->
+
           <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/C++.png" alt="C/C++ skill" class="tech-stack-logo" />
@@ -640,6 +596,54 @@
           <p class="sectionHeadingP"></p>
         </div>
         <div class="project-boxes-div">
+          <!-- Go-Canvas Project -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <a href="https://gocanvas.vercel.app/" target="_blank" class="ProjectHeading">Go-Canvas</a>
+                <p class="ProjectDescription">
+                  Go-Canvas: A modern Learning Management System that empowers educators and engages students with powerful tools for online and hybrid learning. Features include course management, discussion forums, and real-time updates.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://gocanvas.vercel.app/" target="_blank" class="cta" aria-label="Visit Go-Canvas">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/go-canvas.png" alt="Go-Canvas project preview" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SnoopTrade Project -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <a href="https://snooptrade.vercel.app/" target="_blank" class="ProjectHeading">SnoopTrade</a>
+                <p class="ProjectDescription">
+                  SnoopTrade: An insider trading insights dashboard that provides real-time tracking and professional-grade analytics of insider activities. Helps investors make informed decisions with data-driven market patterns.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://snooptrade.vercel.app/" target="_blank" class="cta" aria-label="Visit SnoopTrade">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/snooptrade.png" alt="SnoopTrade project preview" />
+              </div>
+            </div>
+          </div>
+
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -648,10 +652,6 @@
                   Live Notepad: You can write your notes here and access them on any device to get real-time updates.
                 </p>
                 <div class="project-buttons">
-                  <!-- <a href="https://github.com/patelNevil" target="_blank" class="github-redirect"
-                    aria-label="Visit patelNevil on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a> -->
                   <a href="https://livenotepad-five.vercel.app/" target="_blank" class="cta"
                     aria-label="Visit patelNevil">
                     <span>Live view</span>
@@ -668,49 +668,20 @@
             </div>
           </div>
 
-          <!-- Ray ban tag -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <a href="javascript:void(0)" target="_blank" class="ProjectHeading pe-none">RayBan-TEG</a>
-                <p class="ProjectDescription">
-                  RayBan-TEG: The official Ray-Ban website offers a comprehensive selection of prescription eyewear,
-                  including both sunglasses and eyeglasses in their iconic styles. Purchasing directly from their
-                  platform ensures the authenticity and quality of your eyewear.
-                </p>
-                <div class="project-buttons">
-                  <!-- <a href="https://github.com/patelNevil" target="_blank" class="github-redirect"
-                    aria-label="Visit patelNevil on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a> -->
-                  <a href="javascript:void(0)" target="_blank" class="cta pe-none" aria-label="Visit patelNevil">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/RayBan-TEG.webp" alt="RayBan-TEG project preview" />
-              </div>
-            </div>
-          </div>
 
 
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
                 <img src="src/webp/bhavyafavicon.png" alt="bhavyaquartz website favicon" class="faviconforProject" />
-                <a href="https://www.bhavyaquartz.com/" target="_blank" class="ProjectHeading">bhavyaquartz</a>
+                <a href="#" target="_blank" class="ProjectHeading">bhavyaquartz</a>
                 <p class="ProjectDescription">
                   Bhavya Quartz showcases a company specializing in the manufacturing and distribution of quartz stones
                   and surfaces. It highlights their product offerings, services, and the industries they serve, with a
                   focus on quality and innovation in the quartz market.
                 </p>
                 <div class="project-buttons">
-                  <a href="https://www.bhavyaquartz.com/" target="_blank" class="cta"
+                  <a href="#" target="_blank" class="cta"
                     aria-label="Visit bhavyaquartz live">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
@@ -726,17 +697,17 @@
             </div>
           </div>
 
-          <!-- ---------------------- -->
+
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <a href="https://clastera.in/" target="_blank" class="ProjectHeading">Clastera</a>
+                <a href="#" target="_blank" class="ProjectHeading">Clastera</a>
                 <p class="ProjectDescription">
                   Clastera is a tile manufacturing and exporting company, specializing in a wide range of ceramic wall,
                   floor, and porcelain tiles.
                 </p>
                 <div class="project-buttons">
-                  <a href="https://clastera.in/" target="_blank" class="cta" aria-label="Visit clastera Live">
+                  <a href="#" target="_blank" class="cta" aria-label="Visit clastera Live">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
@@ -761,10 +732,6 @@
                   discolorations, revitalizing your furniture.
                 </p>
                 <div class="project-buttons">
-                  <!-- <a href="https://github.com/patelNevil" target="_blank" class="github-redirect"
-                    aria-label="Visit patelNevil on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a> -->
                   <a href="javascript:void(0)" target="_blank" class="cta pe-none" aria-label="Visit patelNevil">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
