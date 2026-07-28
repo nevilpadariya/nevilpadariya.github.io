@@ -1,47 +1,5 @@
-/**
- * Audio player and preloader elements
- * @type {HTMLAudioElement | null}
- */
-const audio = document.getElementById("audioPlayer");
 const loader = document.getElementById("preloader");
 
-/**
- * Toggles the settings container and related UI elements
- */
-function settingtoggle() {
-  const settingContainer = document.getElementById("setting-container");
-  const visualModeContainer = document.getElementById("visualmodetogglebuttoncontainer");
-  const soundContainer = document.getElementById("soundtogglebuttoncontainer");
-  
-  if (settingContainer) {
-    settingContainer.classList.toggle("settingactivate");
-  }
-  if (visualModeContainer) {
-    visualModeContainer.classList.toggle("visualmodeshow");
-  }
-  if (soundContainer) {
-    soundContainer.classList.toggle("soundmodeshow");
-  }
-}
-/**
- * Toggles audio playback based on sound switch state
- */
-function playpause() {
-  const soundSwitch = document.getElementById("switchforsound");
-  if (soundSwitch && audio) {
-    soundSwitch.checked ? audio.play() : audio.pause();
-  }
-}
-
-/**
- * Toggles between light and dark mode
- */
-function visualmode() {
-  document.body.classList.toggle("light-mode"),
-    document.querySelectorAll(".needtobeinvert").forEach(function (e) {
-      e.classList.toggle("invertapplied");
-    });
-}
 window.addEventListener("load", function () {
   if (loader) {
     loader.style.display = "none";
@@ -59,8 +17,6 @@ window.addEventListener("load", function () {
     }, 3500);
   }
 });
-// Mobile menu toggle element (cached for performance)
-const mobileTogglemenu = document.getElementById("mobiletogglemenu");
 /**
  * Toggles the mobile hamburger menu visibility and animations
  */
@@ -102,7 +58,6 @@ const mobilenavLi = document.querySelectorAll(".mobiletogglemenu .mobile-navbar-
 /**
  * Scroll tracking and UI elements
  */
-let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 const scrollProgressBar = document.getElementById("scrollProgressBar");
 
@@ -130,8 +85,6 @@ function updateOnScroll() {
     navbar.classList.remove("navbar-shrink");
     document.body.classList.remove("scrolled");
   }
-  lastScrollTop = scrollTop;
-  
   // Find the current active section
   let activeSectionId = "";
   sections.forEach((section) => {
